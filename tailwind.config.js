@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
+        rubik: ["var(--font-rubik)", ...defaultTheme.fontFamily.sans],
       },
     },
   },
