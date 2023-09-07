@@ -8,8 +8,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        "neem-turquoise": "#70C4BB",
+      },
       fontFamily: {
-        sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
+        rubik: ["var(--font-rubik)", ...defaultTheme.fontFamily.sans],
       },
     },
   },
