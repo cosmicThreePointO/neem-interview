@@ -6,6 +6,7 @@ interface HouseholdTableProps {
   handleSubscriberChange: (index: number) => void;
   handleCoveredChange: (index: number) => void;
   handleInsuranceChange: (index: number, newValue: string) => void;
+  handleIDChange: (index: number, newValue: string) => void;
 }
 
 export default function HouseholdTable({
@@ -13,6 +14,7 @@ export default function HouseholdTable({
   handleSubscriberChange,
   handleCoveredChange,
   handleInsuranceChange,
+  handleIDChange,
 }: HouseholdTableProps) {
   return (
     <div className="grid gap-y-3">
@@ -31,6 +33,7 @@ export default function HouseholdTable({
           handleSubscriberChange={handleSubscriberChange}
           handleCoveredChange={handleCoveredChange}
           handleInsuranceChange={handleInsuranceChange}
+          handleIDChange={handleIDChange}
         />
       ))}
     </div>

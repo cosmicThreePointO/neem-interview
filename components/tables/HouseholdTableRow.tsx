@@ -1,9 +1,12 @@
+import { useEffect, useState } from "react";
+
 interface HouseholdTableRowProps {
   person: HouseholdMember;
   index: number;
   handleSubscriberChange: (index: number) => void;
   handleCoveredChange: (index: number) => void;
   handleInsuranceChange: (index: number, newValue: string) => void;
+  handleIDChange: (index: number, newValue: string) => void;
 }
 
 export default function HouseholdTableRow({
@@ -12,7 +15,10 @@ export default function HouseholdTableRow({
   handleSubscriberChange,
   handleCoveredChange,
   handleInsuranceChange,
+  handleIDChange,
 }: HouseholdTableRowProps) {
+  const [localID, setLocalID] = useState(person.id || "");
+
   return (
     <div className="grid grid-cols-[65px,1fr,auto,120px,120px] gap-4 items-center">
       <div className="flex justify-center">
@@ -57,7 +63,9 @@ export default function HouseholdTableRow({
           type="text"
           placeholder="Ins. ID/SSN"
           className="form-input w-full border border-gray-200 bg-white rounded-md shadow-custom p-2"
-          defaultValue={person.id}
+          value={localID}
+          onChange={(e) => setLocalID(e.target.value)}
+          onBlur={() => handleIDChange(index, localID)}
         />
       </div>
     </div>

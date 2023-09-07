@@ -44,6 +44,15 @@ export default function Home() {
     []
   );
 
+  const handleIDChange = useCallback((index: number, newValue: string) => {
+    setData((prevData) => {
+      const newData = prevData.map((item, i) =>
+        i === index ? { ...item, id: newValue } : item
+      );
+      return newData;
+    });
+  }, []);
+
   return (
     <>
       <Head>
@@ -57,6 +66,7 @@ export default function Home() {
             handleSubscriberChange={handleSubscriberChange}
             handleCoveredChange={handleCoveredChange}
             handleInsuranceChange={handleInsuranceChange}
+            handleIDChange={handleIDChange}
             data={data}
             addNewMember={() =>
               addMemberHandler({

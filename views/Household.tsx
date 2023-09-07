@@ -6,6 +6,7 @@ interface HouseholdProps {
   handleSubscriberChange: (index: number) => void;
   handleCoveredChange: (index: number) => void;
   handleInsuranceChange: (index: number, newValue: string) => void;
+  handleIDChange: (index: number, newValue: string) => void;
 }
 
 export default function Household({
@@ -14,6 +15,7 @@ export default function Household({
   handleSubscriberChange,
   handleCoveredChange,
   handleInsuranceChange,
+  handleIDChange,
 }: HouseholdProps) {
   return (
     <div className="flex flex-col gap-y-3 w-full">
@@ -25,6 +27,7 @@ export default function Household({
         handleSubscriberChange={handleSubscriberChange}
         handleCoveredChange={handleCoveredChange}
         handleInsuranceChange={handleInsuranceChange}
+        handleIDChange={handleIDChange}
       />
       <div className="flex items-center w-full">
         <button
