@@ -1,4 +1,4 @@
-const HOUSEHOLD_MOCK = [
+export const HOUSEHOLD_MOCK = [
   {
     covered: true,
     firstName: "Jerome",

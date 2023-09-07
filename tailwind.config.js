@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        "neem-turquoise": "#70C4BB",
+      },
       fontFamily: {
         rubik: ["var(--font-rubik)", ...defaultTheme.fontFamily.sans],
       },
